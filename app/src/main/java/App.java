@@ -15,9 +15,34 @@ public class App {
             System.out.print("Select (1/2): ");
             String choice = reader.readLine();
             
-
-        } catch (Exception e) {
-            System.err.println("Error: " + e.getMessage());
+            if(choice.equals(1)){
+                CSVDataHandle csv=new CSVDataHandler();
+                RecipeUI ui = new RecipeUI();
+                    ui.displayMenu(csv);
+                }else if(choice.equals(2)){
+                    JSonDatahandler JSON=new JSonDatahandler();
+                    RecipeUI ui = new RecipeUI();
+                    ui.displayMenu(JSON);
+                }else{
+                    CSVDataHandle csv=new CSVDataHandler();
+                    RecipeUI ui = new RecipeUI();
+                    ui.displayMenu(csv);
+                }
+            
+                
+                
+            } catch (Exception e) {
+                System.err.println("Error: " + e.getMessage());
+            }
         }
+    
+    
+    
     }
-}
+
+// ユーザーの選択に応じて、CSVDataHandlerまたはJSONDataHandlerのインスタンスを生成する
+// 「1」を選択した場合、CSVDataHandlerインスタンスを生成する
+// 引数が0個のコンストラクタを実行するものとする
+// 「2」を選択した場合、JSONDataHandlerインスタンスを生成する
+// 不正な入力（「1」「2」以外）が与えられた場合、CSVDataHandlerインスタンスを生成する
+// 選択されたデータハンドラーをcom/recipeappパッケージのRecipeUIに渡し、displayMenuメソッドを呼び出してメインメニューを表示します。
