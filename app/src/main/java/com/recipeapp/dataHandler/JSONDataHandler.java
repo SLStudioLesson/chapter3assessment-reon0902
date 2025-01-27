@@ -1,17 +1,15 @@
-package main.java.com.recipeapp.dataHandler;
-import java.io.IOException;
+package com.recipeapp.datahandler;
 import java.util.ArrayList;
 import com.recipeapp.model.Recipe;
-import com.recipeapp.ui.recipeUI;
 
 public class JSONDataHandler implements DataHandler{
 
 @Override
-public String getmode(){
+public String getMode(){
     return "JSON";
 }
 @Override
-public ArryList<Recipe>readData(){
+public ArrayList<Recipe>readData(){
     return null;
 }
 @Override

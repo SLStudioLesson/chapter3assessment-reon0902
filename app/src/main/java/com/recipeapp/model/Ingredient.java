@@ -1,12 +1,15 @@
-package main.java.com.recipeapp.model;
+package com.recipeapp.model;
+
+import java.util.ArrayList;
 
 public class Ingredient {
     private String name;
-
+    public Ingredient(String name) {
+        this.name = name;
+    }
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

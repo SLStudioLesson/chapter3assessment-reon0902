@@ -1,14 +1,22 @@
-package main.java.com.recipeapp.model;
+package com.recipeapp.model;
 
-import java.utill.ArrayList;
+import java.util.ArrayList;
 public class Recipe {
     private String Recipename;
     private ArrayList<Ingredient>ingredient;
-    public String getName() {
-        return name;
+    
+    
+    public Recipe(String Recipename,ArrayList<Ingredient> ingredient) {
+        this.Recipename = Recipename;
+        this.ingredient=ingredient;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public String getRecipeName() {
+        return Recipename;
+    }
+    public void setRecipeName(String Recipename){
+        this.Recipename = Recipename;
+        
     }
     public ArrayList<Ingredient> getIngredient() {
         return ingredient;
@@ -17,12 +25,7 @@ public class Recipe {
         this.ingredient = ingredient;
     }
 
-
 }
-
-
-
-
 
 // Recipe	name	String	レシピの名前
 // ingredients	ArrayList<Ingredient>	レシピの材料リスト
